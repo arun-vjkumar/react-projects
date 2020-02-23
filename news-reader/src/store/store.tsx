@@ -7,7 +7,7 @@ import {newsReducer} from "../news/reducer";
 import {INewsState} from "../news/types";
 
 const client = axios.create({
-    baseURL: "https://newsapi.org/v2/sources",
+    baseURL: "https://newsapi.org/v2",
     responseType: "json",
 });
 
