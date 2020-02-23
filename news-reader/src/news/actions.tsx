@@ -17,10 +17,26 @@ export const getNewsHeadlines = (): NewsAction => ({
     type: NewsActionType.GET_ALL_NEWS_HEADLINES,
     payload: {
         request: {
+            url: '/sources',
             headers: {
             },
             params: {
-                apiKey: "626b8f2dec7040fb91b2af174e278f0d"
+                apiKey: ""
+            }
+        }
+    }
+});
+
+export const getTopHeadlines = (countryCode: string = null): NewsAction => ({
+    type: NewsActionType.GET_TOP_NEWS_HEADLINES,
+    payload: {
+        request: {
+            url: '/top-headlines',
+            headers: {
+            },
+            params: {
+                country: countryCode ? countryCode : "in",
+                apiKey: ""
             }
         }
     }
