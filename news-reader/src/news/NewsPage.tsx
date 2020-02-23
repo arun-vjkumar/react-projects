@@ -3,11 +3,11 @@ import {store} from "../index";
 import {NewsHeadlines} from "./types";
 import {IAppState} from "../store/store";
 import {connect} from "react-redux";
-import ReactTable from "react-table";
 import {getNewsHeadlines} from "./actions";
-import 'react-table/react-table.css';
 import 'react-tippy/dist/tippy.css'
 import { Tooltip } from "react-tippy";
+import ReactTable from 'react-table-v6'
+import 'react-table-v6/react-table.css'
 
 
 const HeadLinesColumns = [
@@ -18,7 +18,7 @@ const HeadLinesColumns = [
     {
         Header: 'Description',
         accessor: 'description',
-        Cell: (p: any) => <Tooltip title={p.value} position="right" interactive="true" > {p.value} </Tooltip>
+        Cell: (p: any) => <Tooltip title={p.value} position="right" interactive={true} > {p.value} </Tooltip>
     },
     {
         Header: 'Category',

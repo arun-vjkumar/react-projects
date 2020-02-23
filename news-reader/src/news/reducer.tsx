@@ -5,6 +5,7 @@ import {NewsAction} from "./actions";
 
 const initialState: INewsState =  {
     headlines: [],
+    topHeadLines: [],
     newsLoading: false,
 };
 
@@ -26,6 +27,19 @@ export const newsReducer: Reducer<INewsState, NewsAction> = (state = initialStat
             return {
                 ...state,
                 headlines: [],
+                newsLoading: false
+            };
+
+        case  `${NewsActionType.GET_TOP_NEWS_HEADLINES}_SUCCESS`:
+            return {
+                ...state,
+                topHeadLines: action.payload.data ? action.payload.data.articles: [],
+                newsLoading: false
+            };
+        case  `${NewsActionType.GET_TOP_NEWS_HEADLINES}_FAILURE`:
+            return {
+                ...state,
+                topHeadLines: [],
                 newsLoading: false
             };
             default:
