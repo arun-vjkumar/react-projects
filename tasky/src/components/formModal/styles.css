@@ -1,0 +1,142 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    align-items: baseline;
+    margin-left: -50vw;
+    left: 50%;
+    z-index: 1;
+}
+
+.modalContent {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.inputElements {
+    margin-right: 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    align-items: baseline;
+    flex-grow: 1;
+}
+
+header {
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    border-top: 1px solid black;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+.formFields {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+input[type=textBox] |  input[type=select] {
+    margin: 2px 2px;
+    box-sizing: content-box;
+    border-radius: 1rem;
+}
+
+.title {
+    font-size: 30px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: vertical;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    outline: none;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: lightgray;
+    align-self: flex-end;
+    margin: 5px;
+}

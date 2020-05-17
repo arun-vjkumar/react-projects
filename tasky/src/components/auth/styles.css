@@ -1,0 +1,60 @@
+.page {
+    width: 100%;
+    height: 100%;
+    background-color: #F1FFFB;
+    font-size: 0px;
+    line-height: 2;
+    letter-spacing: 0.416em;
+    font-weight: 600;
+    font-style: normal;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login {
+    background-color: whitesmoke;
+    width: 350px;
+    height: 350px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.loginField {
+    padding-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+input[type=textBox], input[type=password] {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 20px;
+    outline: none;
+    display: block;
+}
+
+button {
+    border-radius: 10px;
+    background-color: #c8dced;
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    outline: none;
+}
